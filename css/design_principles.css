@@ -475,18 +475,18 @@ footer {
 
 
 .boxone {
-        background-image: url("/img/journey_bg1.png");
+        background-image: url("../img/journey_bg1.png");
         background-size: 100%;
         background-repeat: no-repeat;
         /* display: flex; */
     }
 .boxtwo {
-        background-image: url("/img/journey_bg2.png");
+        background-image: url("../img/journey_bg2.png");
         background-size: 100%;
         background-repeat: no-repeat;
     }
 .boxthree {
-        background-image: url("/img/journey_bg3.png");
+        background-image: url("../img/journey_bg3.png");
         background-size: 100%;
         background-repeat: no-repeat;
     }
@@ -798,18 +798,18 @@ gap: 20px;
 
 
 .boxone {
-        background-image: url("/img/journey_bg1.png");
+        background-image: url("../img/journey_bg1.png");
         background-size: 100%;
         background-repeat: no-repeat;
         /* display: flex; */
     }
 .boxtwo {
-        background-image: url("/img/journey_bg2.png");
+        background-image: url("../img/journey_bg2.png");
         background-size: 100%;
         background-repeat: no-repeat;
     }
 .boxthree {
-        background-image: url("/img/journey_bg3.png");
+        background-image: url("../img/journey_bg3.png");
         background-size: 100%;
         background-repeat: no-repeat;
     }
@@ -1149,18 +1149,18 @@ gap: 20px;
 
 
 .boxone {
-        background-image: url("/img/journey_bg1.png");
+        background-image: url("../img/journey_bg1.png");
         background-size: 100%;
         background-repeat: no-repeat;
         /* display: flex; */
     }
 .boxtwo {
-        background-image: url("/img/journey_bg2.png");
+        background-image: url("../img/journey_bg2.png");
         background-size: 100%;
         background-repeat: no-repeat;
     }
 .boxthree {
-        background-image: url("/img/journey_bg3.png");
+        background-image: url("../img/journey_bg3.png");
         background-size: 100%;
         background-repeat: no-repeat;
     }
