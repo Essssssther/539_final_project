@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/intro-style.css">
+    <title>HMI Design Principles Explored</title>
+</head>
+
+<body>
+    <a class="skip" href="#intro">Skip to Main Content</a>
+
+    <header>
+        <input type="checkbox" id="navi-toggle" class="checkbox" />
+        <label for="navi-toggle" class="button" aria-label="Toggle navigation">
+            <span class="icon">&nbsp;</span>
+        </label>
+        <div class="background">&nbsp;</div>
+
+        <div class="logo">
+            <a href="intro.html">
+                <img src="img/logo.png" alt="Website Logo">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <ul class="list">
+                <li class="item"><a href="intro.html" class="active">Intro</a></li>
+                <li class="item"><a href="design_principles.html">Design Principles</a></li>
+                <li class="item"><a href="nio.html">NIO</a></li>
+                <li class="item"><a href="voyah.html">VOYAH</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <div class="text-content">
+                <h2>Automotive Interface Insights</h2>
+                <h1>HMI Design Principles Explored</h1>
+                <p>Consumers now prioritize high-tech features in vehicles, viewing them as mobile offices and
+                    entertainment hubs, with younger generations especially valuing advanced in-car interfaces. This
+                    shift emphasizes the importance of seamless integration with essential mobile applications and
+                    lifestyle enhancement.</p>
+            </div>
+        </section>
+
+        <div class="history" id="history">
+            <h2>Brief History of the Design of Human-Machine Interface (HMI)</h2>
+            <p>Automotive HMI design focuses on developing the interaction interface between humans and vehicles. It
+                extends beyond interface design to include switches, buttons, large screens, and voice controls. The
+                goal is to ensure fluid, smooth interaction, enhancing the driving experience.</p>
+            <div class="image-grid">
+                <div class="image-item">
+                    <img src="img/mechanical-instrument-panel.png" alt="Mechanical Instrument Panel">
+                    <p>Mechanical Instrument Panel</p>
+                </div>
+                <div class="image-item">
+                    <img src="img/electronic-instrument-cluster.png" alt="Electronic Instrument Cluster">
+                    <p>Electronic Instrument Cluster</p>
+                </div>
+                <div class="image-item">
+                    <img src="img/fully-digital-instrument-cluster.png" alt="Fully Digital Instrument Cluster">
+                    <p>Fully Digital Instrument Cluster</p>
+                </div>
+                <div class="image-item">
+                    <img src="img/hud-display.png" alt="HUD (Head-Up Display)">
+                    <p>HUD (Head-Up Display)</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="principles-container">
+            <h2>Design Principles for In-Vehicle Systems</h2>
+            <div class="principle-bigger">
+                <div class="principle-item" id="gradient-border1">
+                    <p>The operation behavior must be fast and precise, cannot exceed 3 seconds</p>
+                    <div class="principle-number">01</div>
+                </div>
+                <div class="principle-item" id="gradient-border2">
+                    <p>Functions need to be highly aggregated and clear.</p>
+                    <div class="principle-number">02</div>
+                </div>
+                <div class="principle-item" id="gradient-border3">
+                    <p>Feedback should be obvious and efficient for effective interaction</p>
+                    <div class="principle-number">03</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>SI 539 Web Design Fall 2023 | Chloe (Guanyi) Chen | Yiying Huang</p>
+    </footer>
+
+    <script src="js/intro_js.js"></script>
+</body>
+
+</html>

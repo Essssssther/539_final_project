@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700&display=swap');
+
+.skip {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    -webkit-transition: top 0.5s ease-out;
+    transition: top 0.5s ease-out;
+    padding: 10px;
+    z-index: 100;
+}
+
+.skip:focus {
+    top: 10px;
+    left: 10px;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+
+}
+
+/* A totally different style of the menu in mobile view */
+@media screen and (max-width: 699px) {
+    body {
+        background-color: #1E1E1E;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: 0.5px;
+        line-height: 1.6;
+        color: white;
+        /* border: blue solid 1px; */
+    }
+
+    /* Logo fixed position */
+    .logo {
+        position: fixed;
+        top: 10%;
+        left: 8%;
+        z-index: 100;
+    }
+
+    /* Hamburger Menu for the mobile view, (Reference to https://alvarotrigo.com/blog/hamburger-menu-css/) */
+    .checkbox {
+        display: none;
+    }
+
+    /* Hamburger button position */
+    .button {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 5vh;
+        right: 5vw;
+        z-index: 2000;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    /* Hamburger menu after click, animation */
+    .background {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        position: fixed;
+        top: -10vh;
+        right: -10vw;
+        background-image: radial-gradient(rgb(29, 29, 29), rgb(88, 98, 113, 0.6));
+        z-index: 99;
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    /* Hamburger menu items*/
+    .nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -60vw;
+        z-index: 1000;
+        opacity: 0;
+        width: 0;
+        transition: all 0.8s;
+    }
+
+    /* Menu items position and styling */
+    .list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .item {
+        margin-bottom: 3%;
+    }
+
+    .item a {
+        font-size: 25px;
+        text-decoration: none;
+        color: white;
+
+    }
+
+    .link:link,
+    .link:visited {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: linear-gradient(120deg,
+                transparent 0%,
+                transparent 50%,
+                white 50%);
+        background-size: 220%;
+        transition: all 0.8s;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 20px;
+        border-radius: 15px;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a.active {
+        background-color: white;
+        color: #1E1E1E;
+    }
+
+    nav a:hover {
+        display: inline;
+        background: rgb(194, 194, 194);
+        color: #333;
+        text-decoration: none;
+        padding: 5px 20px;
+        border-radius: 15px;
+    }
+
+    /* functionality */
+    .checkbox:checked~.background {
+        transform: scale(80);
+    }
+
+    .checkbox:checked~.nav {
+        opacity: 1;
+        width: 100%;
+        right: 0;
+    }
+
+    /* styling hamb ICON */
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Hamburger Icon animation (Reference to https://alvarotrigo.com/blog/hamburger-menu-css/) */
+
+    .icon,
+    .icon::before,
+    .icon::after {
+        width: 2rem;
+        height: 3px;
+        border-radius: 50px;
+        background-color: white;
+        display: inline-block;
+        transition: all 1s;
+    }
+
+    .icon::before,
+    .icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.8s;
+    }
+
+    .icon::before {
+        top: -0.8rem;
+    }
+
+    .icon::after {
+        top: 0.8rem;
+    }
+
+    .button:hover icon:before {
+        top: -1rem;
+    }
+
+    .button:hover icon::after {
+        top: 1rem;
+    }
+
+    .checkbox:checked+.button .icon {
+        background-color: transparent;
+        transition: all 0.2s;
+    }
+
+    .checkbox:checked+.button .icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    .checkbox:checked+.button .icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    main {
+        margin-top: 15%;
+    }
+
+    /* intro section styling */
+    #intro {
+        width: 100%;
+        height: 80vh;
+        background-image: url('../img/intro_page_bg.png');
+        background-size: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-content {
+        margin: 8%;
+        padding-top: 25%;
+    }
+
+    h1 {
+        font-size: 2em;
+        font-weight: 300;
+        line-height: 1.3;
+        padding: 5% 0;
+    }
+
+    h2 {
+        font-size: 15px;
+        font-weight: 300;
+        color: #afafaf;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 300;
+        color: #ffffff;
+    }
+}
+
+/* The rest of the style will mostly remain the same */
+@media screen and (min-width: 400px) {
+
+    /* History section styling */
+    .history {
+        border: #ffffff54 solid 0.2px;
+        border-radius: 25px;
+        margin: 0 8%;
+        padding: 7% 5%;
+        background-color: rgba(255, 255, 255, 0.062);
+        box-shadow: 0 0p 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .history h2 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+        margin-bottom: 5%;
+    }
+
+    .history p {
+        margin-top: 5%;
+    }
+
+    /* grid style for the smallest breakpoint */
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        align-items: start;
+        justify-items: center;
+        text-align: center;
+        padding: 3% 3% 0 3%;
+        transition: transform 0.3s ease-out;
+        transform-style: preserve-3d;
+    }
+
+    .image-item {
+        background-color: rgba(58, 58, 58, 0.34);
+        box-shadow: 12px 13px 31px rgba(0, 0, 0, 0.38);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .image-grid img {
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 20px 20px 0 0;
+        transform: scale(1.3)
+    }
+
+    .image-grid p {
+        font-size: 16px;
+        font-weight: 300;
+        color: #ffffff;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20% 5%;
+    }
+
+    /* Design principle section styling */
+    .principles-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .principles-container h2 {
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+        margin: 13% 0 8% 0;
+    }
+
+    .principle-item {
+        border: white solid 1px;
+        border-radius: 20px;
+        height: 15vh;
+        padding: 13%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+    .principle-number {
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(121, 121, 121);
+        font-size: 26px;
+    }
+
+    .principle-item p {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 15px;
+        width: 80%;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        color: rgb(227, 227, 227);
+        line-height: 1.5;
+    }
+    /* create a gradient border for the pinciples class */
+    #gradient-border1,  #gradient-border2,  #gradient-border3 {
+        border: 1px solid transparent;
+        background: linear-gradient(45deg, #175252, #225A72);
+        background-clip: padding-box;
+        border-radius: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Create a pseudo-element for the content's background */
+    #gradient-border1:before,#gradient-border2:before,#gradient-border3:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-color: #1E1E1E;
+        border-radius: inherit;
+        background-clip: content-box;
+        padding: 3px;
+    }
+}
+
+/* style for larger screen */
+@media screen and (min-width: 700px) {
+    .checkbox {
+        display: none;
+    }
+
+    .logo {
+        position: absolute;
+        margin-left: 10%;
+    }
+
+    /* different navigation style for larger web view */
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 5% 0 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 5px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 20px;
+        border-radius: 15px;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+        display: inline;
+        background: rgb(194, 194, 194);
+        color: #333;
+        text-decoration: none;
+        padding: 5px 20px;
+        border-radius: 15px;
+    }
+
+    nav ul li a.active {
+        background-color: white;
+        color: #1E1E1E;
+    }
+
+    body {
+        background-color: #1E1E1E;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: 0.5px;
+        line-height: 1.6;
+        color: white;
+    }
+
+    #intro {
+        width: 100%;
+        height: 80vh;
+        background-image: url('../img/intro_page_bg.png');
+        background-size: 80%;
+        background-position: right;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #intro .text-content {
+        text-align: left;
+        margin-left: 10%;
+        margin-right: 40%;
+        padding-bottom: 5%;
+    }
+
+    #intro h1 {
+        font-size: 3em;
+        font-weight: 400;
+        line-height: 1.3;
+        padding-bottom: 3%;
+    }
+
+    #intro h2 {
+        font-size: 1.5em;
+        font-weight: 300;
+        color: #afafaf;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .history h2 {
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+    .principles-container {
+        max-width: 84%;
+        margin-bottom: 10%;
+    }
+
+    .principle-bigger {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .principle-item {
+        height: 20vh;
+        padding: 8% 3%;
+        margin-bottom: 0;
+    }
+
+    .principle-item:last-child {
+        grid-column: 1/3;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .principles-container h2 {
+        font-size: 26px;
+        font-weight: 500;
+        color: white;
+        margin: 10% 0 5% 0;
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    /* disable the skip animation */
+    .skip {
+        position: static;
+        clip: auto;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        white-space: normal;
+    }
+
+    /* disable the 3D animation in the brief history of the design of HMI section */
+    .image-grid,
+    .image-item,
+    .image-grid img {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+
+    .checkbox:checked~.background {
+        transform: none;
+        transition: none;
+    }
+
+    .checkbox:checked~.nav {
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 1;
+        width: 100%;
+        right: 0;
+        transition: none;
+    }
+    .icon,
+    .icon::before,
+    .icon::after {
+        transition: none;
+    }
+
+    .button:hover .icon::before,
+    .button:hover .icon::after,
+    .checkbox:checked+.button .icon::before,
+    .checkbox:checked+.button .icon::after {
+        transition: none;
+    }
+
+    /* Disable the hamburger icon animation in reduce motion */
+    .icon,
+    .icon::before,
+    .icon::after {
+        transition: none;
+    }
+
+    .checkbox:checked+.button .icon {
+        background-color: transparent;
+    }
+
+    .checkbox:checked+.button .icon::before {
+        transform: rotate(135deg);
+    }
+
+    .checkbox:checked+.button .icon::after {
+        transform: rotate(-135deg);
+    }
+}
