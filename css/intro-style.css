@@ -276,7 +276,7 @@ footer {
         margin: 0 8%;
         padding: 7% 5%;
         background-color: rgba(255, 255, 255, 0.062);
-        box-shadow: 0 0p 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     }
 
     .history h2 {
